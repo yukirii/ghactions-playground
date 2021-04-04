@@ -6,7 +6,8 @@ on:
       - published
 
 env:
-  DOCKER_BASE_NAME: docker.pkg.github.com/${{ github.repository }}
+  #DOCKER_BASE_NAME: docker.pkg.github.com/${{ github.repository }}
+  DOCKER_BASE_NAME: docker.pkg.github.com/${{ github.repository }}/branchtest
 
 jobs:
   build-and-push:
