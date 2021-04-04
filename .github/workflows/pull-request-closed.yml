@@ -1,0 +1,16 @@
+name: pull-request-closed
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Show message
+        run: |
+         echo "pull-${{ github.event.pull_request.number }}: closed"
+
