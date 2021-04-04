@@ -31,3 +31,6 @@ jobs:
       - name: Run cmd
         run: echo "${{ secrets.SECRET_KEY }}"
 
+      - name: Run cmd
+        run: echo "${{ secrets.SECRET_KEY }}"
+
