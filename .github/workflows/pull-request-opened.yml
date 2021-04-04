@@ -24,3 +24,7 @@ jobs:
 
           echo "head.ref: ${{ github.event.pull_request.head.ref }}"
           echo "head.repo.fork: ${{ github.event.pull_request.head.repo.fork }}"
+
+      - name: Run cmd
+        run: env
+
