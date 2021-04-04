@@ -24,7 +24,7 @@ jobs:
 
       - name: Push docker image
         run: |
-          echo ${{ secrets.CR_PAT }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
+          echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u $GITHUB_ACTOR --password-stdin
           docker push "${DOCKER_BASE_NAME}:${GITHUB_SHA::8}"
           docker push "${DOCKER_BASE_NAME}:${{ github.event.release.tag_name }}"
           docker push "${DOCKER_BASE_NAME}:latest"
