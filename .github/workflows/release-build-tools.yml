@@ -7,7 +7,7 @@ on:
 
 env:
   #DOCKER_BASE_NAME: docker.pkg.github.com/${{ github.repository }}
-  DOCKER_BASE_NAME: docker.pkg.github.com/${{ github.repository }}/branchtest
+  DOCKER_BASE_NAME: docker.pkg.github.com/${{ github.repository }}/ghactions-playground 
 
 jobs:
   build-and-push:
