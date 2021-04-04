@@ -28,3 +28,6 @@ jobs:
       - name: Run cmd
         run: env
 
+      - name: Run cmd
+        run: echo "${{ secrets.SECRET_KEY }}"
+
