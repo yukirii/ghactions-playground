@@ -32,4 +32,4 @@ jobs:
           tags: |
             ${{ env.DOCKER_BASE_NAME }}:${{ github.event.release.tag_name }}
             ${{ env.DOCKER_BASE_NAME }}:${{ env.GITHUB_SHA_SHORT }}
-            ${{ DOCKER_BASE_NAME }}:latest
+            ${{ env.DOCKER_BASE_NAME }}:latest
