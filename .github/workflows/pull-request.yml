@@ -1,0 +1,50 @@
+name: pull-request
+
+on:
+  pull_request:
+    types: [opened, reopened, closed]
+  repository_dispatch:
+    types: [ok-to-preview-command]
+
+jobs:
+  pr-first-comment:
+    runs-on: ubuntu-latest
+    if:
+      github.event_name == 'pull_request' &&
+      (github.event.action == 'opened' || github.event.action == 'reopened')
+    steps:
+    - name: pr-first-comment
+      uses: tmp-blog-v-team/blog-gh-actions/pr-first-comment@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-preview:
+    runs-on: ubuntu-latest
+    if:
+      github.event_name == 'repository_dispatch' &&
+      github.event.client_payload.slash_command.args.named.sha != '' &&
+      contains(github.event.client_payload.pull_request.head.sha, github.event.client_payload.slash_command.args.named.sha)
+    steps:
+    - name: PR checkout
+      uses: actions/checkout@v2
+      with:
+        ref: 'refs/pull/${{ github.event.client_payload.pull_request.number }}/merge'
+        submodules: true
+
+    - name: Deploy preview site
+      uses: tmp-blog-v-team/blog-gh-actions/deploy-preview@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        azure-storage-connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+        preview-base-url: "https://yukiriiblogtest.z11.web.core.windows.net/"
+
+  delete-preview:
+    runs-on: ubuntu-latest
+    if:
+      github.event_name == 'pull_request' && github.event.action == 'closed'
+    steps:
+    - name: Delete preview site
+      uses: tmp-blog-v-team/blog-gh-actions/delete-preview@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        azure-storage-connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
