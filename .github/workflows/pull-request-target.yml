@@ -5,14 +5,14 @@ on:
     types: [opened, reopened, closed]
 
 jobs:
-  pr-first-comment:
+  pr-comment:
     runs-on: ubuntu-latest
     if:
       github.event_name == 'pull_request_target' &&
       (github.event.action == 'opened' || github.event.action == 'reopened')
     steps:
-    - name: pr-first-comment
-      uses: tmp-blog-v-team/blog-gh-actions/pr-first-comment@main
+    - name: pr-comment
+      uses: tmp-blog-v-team/blog-gh-actions/pr-comment@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -22,7 +22,7 @@ jobs:
       github.event_name == 'pull_request_target' && github.event.action == 'closed'
     steps:
     - name: Delete preview site
-      uses: tmp-blog-v-team/blog-gh-actions/delete-preview@main
+      uses: tmp-blog-v-team/blog-gh-actions/delete-preview@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         azure-storage-connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}

@@ -19,7 +19,7 @@ jobs:
         submodules: true
 
     - name: Deploy preview site
-      uses: tmp-blog-v-team/blog-gh-actions/deploy-preview@main
+      uses: tmp-blog-v-team/blog-gh-actions/deploy-preview@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         azure-storage-connection-string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
