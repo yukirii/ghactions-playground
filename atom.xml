@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jpaztech.github.io/example-blog/"/>
-  <updated>2021-04-22T15:02:08.708Z</updated>
+  <updated>2021-04-25T02:09:24.116Z</updated>
   <id>https://jpaztech.github.io/example-blog/</id>
   
   <author>
@@ -17,11 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>test2</title>
+    <link href="https://jpaztech.github.io/example-blog/information/test2/"/>
+    <id>https://jpaztech.github.io/example-blog/information/test2/</id>
+    <published>2021-04-23T01:00:00.000Z</published>
+    <updated>2021-04-25T02:09:24.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>test2</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;test2&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Information" scheme="https://jpaztech.github.io/example-blog/tags/Information/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>タイトル</title>
+    <link href="https://jpaztech.github.io/example-blog/information/test3/"/>
+    <id>https://jpaztech.github.io/example-blog/information/test3/</id>
+    <published>2021-04-01T08:30:00.000Z</published>
+    <updated>2021-04-25T02:09:24.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>[ 課題 ] ↑プレビューに出さない</p><p><strong>太字</strong><br><del>訂正せん</del><br><em>斜め文字</em></p><p>[ 課題 ] カラーピッカーつける<br><span style="color:red;">文字色あり</span></p><blockquote><p>引用</p><blockquote><p>引用</p></blockquote></blockquote><h2 id="見出し-大"><a href="#見出し-大" class="headerlink" title="見出し (大)"></a>見出し (大)</h2><h3 id="見出し-中"><a href="#見出し-中" class="headerlink" title="見出し (中)"></a>見出し (中)</h3><h4 id="見出し-小"><a href="#見出し-小" class="headerlink" title="見出し (小)"></a>見出し (小)</h4><ul><li>リスト<ul><li>リスト</li><li>リスト</li></ul></li><li>リスト</li></ul><ol><li>数字リスト<ol><li>数字リスト</li><li>数字リスト</li></ol></li><li>数字リスト</li><li>数字リスト</li></ol><p>区切り線 ( hr タグでも可能)</p><hr><p><a href="https://jpaztech.github.io/blog/" title="Japan Azure IaaS Core Support Blog">Japan Azure IaaS Core Support Blog</a></p><p>[ 課題 ] () 内について、サンプルは絶対パスですが、相対パスで書いてください。<br>ディレクトリ名はブログ記事のファイル名と同じにしましょう。<br>例： ディレクトリ名/画像名.拡張子<br><img src="https://jpaztech.github.io/blog/vm/re-install-windows-azure-guest-agent/service.png" alt=""></p><p>[ 課題 ] CMD や PowerShell が選択肢にないですが、ブログにするとちゃんと色がつきます。。</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">net</span> stop rdagent</span><br><span class="line"><span class="built_in">net</span> stop WindowsAzureGuestAgent</span><br><span class="line"><span class="built_in">net</span> stop WindowsAzureTelemetryService</span><br></pre></td></tr></table></figure><table><thead><tr><th>見出し</th><th>見出し</th></tr></thead><tbody><tr><td>セル</td><td>セル</td></tr><tr><td>セル</td><td>セル</td></tr></tbody></table><p>[ その他課題 ]<br>プレビュー画面の CSS を適用</p><div style="background-color:#e2daf1 !important; padding: 1px 14px !important; border-radius: 10px !important;"><p><strong>注意</strong><br>hogehoge</p></div><br><div style="border-left:10px #e2daf1 solid!important; padding: 1px 14px !important; border-radius: 10px !important;"><p><strong>注意</strong><br>hogehogeS</p></div><br><div style="border-left:10px #e2daf1 solid!important; padding: 1px 14px !important;"><p><strong>注意</strong><br>hogehoge</p></div><br><div style="border-left:10px #e2daf1 solid !important;border-top: 1px #A9A9A9 solid !important; border-right: 1px #A9A9A9 solid !important; border-bottom: 2px #A9A9A9 solid !important; padding: 1px 14px !important;"><p><strong>注意</strong><br>hogehoge</p></div><br><div style="border-top:10px #e2daf1 solid !important;border-left: 1px #A9A9A9 solid !important; border-right: 1px #A9A9A9 solid !important; border-bottom: 2px #A9A9A9 solid !important; padding: 1px 14px !important;"><p><strong>注意</strong><br>hogehoge</p></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;[ 課題 ] ↑プレビューに出さない&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;太字&lt;/strong&gt;&lt;br&gt;&lt;del&gt;訂正せん&lt;/del&gt;&lt;br&gt;&lt;em&gt;斜め文字&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;[ 課題 ] カラーピッカーつける&lt;br&gt;&lt;span style=&quot;color:red;&quot;&gt;文字
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Information" scheme="https://jpaztech.github.io/example-blog/tags/Information/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Example article</title>
     <link href="https://jpaztech.github.io/example-blog/information/test/"/>
     <id>https://jpaztech.github.io/example-blog/information/test/</id>
     <published>2020-12-21T06:00:00.000Z</published>
-    <updated>2021-04-22T15:02:08.708Z</updated>
+    <updated>2021-04-25T02:09:24.116Z</updated>
     
     <content type="html"><![CDATA[<p>hello, world!</p>]]></content>
     
